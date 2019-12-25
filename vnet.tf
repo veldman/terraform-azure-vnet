@@ -23,7 +23,7 @@ resource "azurerm_virtual_network" "cloudcommons" {
     content {
       name           = subnet.value.name
       address_prefix = subnet.value.address_prefix
-      security_group = var.nsg_enabled == true && subnet.value.security_group == true ? azurerm_network_security_group.cloudcommons.0.id: null
+      security_group = var.nsg_enabled == true && subnet.value.security_group == true ? azurerm_network_security_group.cloudcommons.0.id : null
     }
   }
 

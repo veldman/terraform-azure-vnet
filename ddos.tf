@@ -5,8 +5,8 @@ resource "azurerm_network_ddos_protection_plan" "cloudcommons" {
   resource_group_name = "${var.resource_group}"
 
   tags = {
-    app = "${var.app}"    
+    app         = "${var.app}"
     environment = "${var.environment}"
-    creator = "${var.creator}"   
-  }  
+    creator     = "${var.creator}"
+  }
 }
