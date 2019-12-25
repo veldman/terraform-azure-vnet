@@ -21,6 +21,7 @@ variable address_space {
 variable dns_servers {
   type        = list(string)
   description = "(Optional) List of DNS Servers configured in the VNET"
+  default     = null
 }
 
 variable ddos_enabled {
