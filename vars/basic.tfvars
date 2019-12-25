@@ -12,4 +12,3 @@ subnets = [
     security_group = false
   }
 ]
-
