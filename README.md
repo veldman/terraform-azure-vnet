@@ -15,7 +15,7 @@ The basic setup createas an address space, without NSG nor DDOS plan, and create
 
 ``` tf
 name           = "test"
-location       = "westeu"
+location       = "westeurope"
 resource_group = "test_rg"
 address_space  = ["10.0.0.0/16"]
 dns_servers    = ["10.0.0.4", "10.0.0.5"]
@@ -36,7 +36,7 @@ This example cretes a Network Security Group and three VNETs. The NSG is pluged 
 
 ```tf
 name           = "test"
-location       = "westeu"
+location       = "westeurope"
 resource_group = "test_rg"
 address_space  = ["10.0.0.0/16"]
 dns_servers    = ["10.0.0.4", "10.0.0.5"]
@@ -67,7 +67,7 @@ This example adds a DDos Plan to the VNET. No NSG is created
 
 ```tf
 name           = "test"
-location       = "westeu"
+location       = "westeurope"
 resource_group = "test_rg"
 address_space  = ["10.0.0.0/16"]
 dns_servers    = ["10.0.0.4", "10.0.0.5"]
@@ -98,7 +98,7 @@ This example creates a VNET with DDos Plan and NSG, and three subnets. subnet1 h
 
 ```tf
 name           = "test"
-location       = "westeu"
+location       = "westeurope"
 resource_group = "test_rg"
 address_space  = ["10.0.0.0/16"]
 dns_servers    = ["10.0.0.4", "10.0.0.5"]
