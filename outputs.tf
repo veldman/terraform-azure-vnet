@@ -4,6 +4,6 @@ output "id" {
 }
 
 output "subnets" {
-    value     = azurerm_virtual_network.cloudcommons.subnet
+    value     = tolist(azurerm_virtual_network.cloudcommons.subnet)
     description = "Subnet"
 }
