@@ -1,8 +1,3 @@
-locals {
-  ddos_plan_enabled = length(azurerm_network_ddos_protection_plan.cloudcommons) > 0
-  ddos_plan_id      = local.ddos_plan_enabled == true ? azurerm_network_ddos_protection_plan.cloudcommons.0.id : null
-}
-
 resource "azurerm_virtual_network" "cloudcommons" {
   name                = "${var.name}-vnet"
   location            = var.location

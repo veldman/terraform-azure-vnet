@@ -31,6 +31,12 @@ variable ddos_enabled {
   default     = false
 }
 
+variable ddos_id {
+  type      = string
+  description = "(Optional) Indicates the DDOS service to use. If no DDOS is specified, the module will create one."
+  default = null
+}
+
 variable nsg_enabled {
   type        = bool
   description = "(Optional) Adds NSG to the VNET."
