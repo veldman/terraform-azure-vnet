@@ -1,5 +1,6 @@
 resource "azurerm_virtual_network" "cloudcommons" {
   name                = "${var.name}-vnet"
+  count               = var.enabled ? 1 : 0
   location            = var.location
   resource_group_name = var.resource_group
   address_space       = var.address_space

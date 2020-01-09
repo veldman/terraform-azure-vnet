@@ -1,6 +1,6 @@
 locals {
   ddos_plan_enabled = length(azurerm_network_ddos_protection_plan.cloudcommons) > 0
-  ddos_plan_id      = local.ddos_plan_enabled == true ? var.ddos_id == null ? azurerm_network_ddos_protection_plan.cloudcommons.0.id : var.ddos_id : null
+  ddos_plan_id      = var.enabled && local.ddos_plan_enabled ? var.ddos_id == null ? azurerm_network_ddos_protection_plan.cloudcommons.0.id : var.ddos_id : null
 }
 
 resource "azurerm_network_ddos_protection_plan" "cloudcommons" {

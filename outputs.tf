@@ -1,9 +1,9 @@
 output "id" {
-  value       = "${azurerm_virtual_network.cloudcommons.id}"
+  value       = var.enabled ? azurerm_virtual_network.cloudcommons[0].id : null
   description = "VNET Id"
 }
 
 output "subnets" {
-    value     = tolist(azurerm_virtual_network.cloudcommons.subnet)
+    value     = var.enabled ? tolist(azurerm_virtual_network.cloudcommons[0].subnet) : null
     description = "Subnet"
 }

@@ -3,6 +3,13 @@ variable name {
   description = "(Required) The name of the virtual network. Changing this forces a new resource to be created."
 }
 
+variable enabled {
+  type        = bool
+  description = "(Optional) Should this VNET created? Defaults to true"
+  default     = true
+}
+
+
 variable location {
   type        = string
   description = "(Required) The location where the resource group should be created. For a list of all Azure locations, please consult this link or run az account list-locations --output table."
@@ -32,9 +39,9 @@ variable ddos_enabled {
 }
 
 variable ddos_id {
-  type      = string
+  type        = string
   description = "(Optional) Indicates the DDOS service to use. If no DDOS is specified, the module will create one."
-  default = null
+  default     = null
 }
 
 variable nsg_enabled {
