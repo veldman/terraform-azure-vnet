@@ -77,3 +77,17 @@ variable creator {
   description = "(Optional) Adds a tag indicating the creator of this resource"
   default     = "cloudcommons"
 }
+
+variable lifecycle_ignore {
+  type = list(string)
+}
+
+variable lifecycle_create_before_destroy {
+  type    = bool
+  default = false
+}
+
+variable lifecycle_prevent_destroy {
+  type    = bool
+  default = false
+}
